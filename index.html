@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Crystals Collector!</title>
+  <meta name="description" content="">
+  <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script type="text/javascript" src="assets/javascript/game.js"></script>
+
+</head>
+
+<body>
+
+     <header>
+       <div class="container">
+           <div class="center">
+             <h1>Crystals Collector!</h1>
+          </div> 
+        </div>
+      </div>   
+     </header>
+
+     <article>
+
+         <section class="container">
+            <div class="row">
+                <div class="col special-p">
+                      <p>You will be given a random number at the start of the game.There are four buttons below. By clicking one of the buttons, you will add a specific amount of points to your total score.</p>
+                      <p>You win the game by matching your total score to a random number, you lose the game if your total score foes above the ramdom number.</p>
+                      <p>The value of each crystal is hidden from you until you click on it. Each time when the game starts, the game will chnage the calue of each crystal.</p>
+                </div>
+
+                <div class="col">
+                    <div class="row">
+                         <div class="col">
+                            <h3 id="random-num" class="center">0</h3>
+                         </div>
+                         <div class="col center win-loss">
+                             <p>Wins: <span id="win">0</span></p>
+                             <p>Loss: <span id="loss">0</span></p>
+                         </div>
+                    </div> 
+                </div>
+            </div>
+
+                <div class="row">
+                    <div id="red-button" class="col center btn btn-margin">Red</div>
+                    <div id="blue-button" class="col center btn btn-margin">Blue</div>
+                    <div id="yellow-button" class="col center btn btn-margin">Yellow</div>
+                    <div id="green-button" class="col center btn btn-margin">Green</div>
+                </div>  
+
+                <div class="row">
+                    <div class="col center score-class">
+                      <p>Your Total Score is: <span id="total">0</span></p>
+                    </div>
+                </div>
+        </section>
+
+     </article>
+
+
+
+    <footer>
+        <div class="container">
+        </div>   
+    </footer>
+
+
+
+</body>
+</html>

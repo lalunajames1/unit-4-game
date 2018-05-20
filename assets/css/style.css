@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css?family=Biryani:900');
+@import url('https://fonts.googleapis.com/css?family=Yantramanav:400,500,700,900');
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Yantramanav', sans-serif;
+    background-image: url("fancy_deboss/fancy_deboss.png")
+}
+
+.container {
+    width: 1024px;
+    margin: 0 auto;
+}
+
+header{
+    height: auto;
+    margin-bottom: 40px;
+}
+
+footer {
+    height: 40px;
+    width: 100%;
+    background-color: gainsboro;
+    position: absolute;
+    bottom:0;
+    top:100%;
+
+}
+
+h1 {
+    font-family: 'Biryani', sans-serif;
+    font-size: 50px;
+    padding: 20px 0 10px 0;
+    color: #163266;
+    border-bottom: 3px solid rgb(61, 223, 128);
+}
+
+.special-p > p {
+    line-height:20px;
+    margin-bottom: 15px;
+}
+
+.special-p {
+    background-color:#cfcfcf;
+    padding: 10px;
+    border: 2px solid #b1b1b1;
+    color: #163266;
+}
+
+.row {
+    display: flex; 
+    margin: 10px;
+    margin-bottom: 40px;
+}
+
+
+.col {
+    flex: 1;
+}
+
+.btn{
+    padding: 8px 2px 8px 2px;
+    color : #fff;
+    border-radius: 20px;
+}
+
+.btn-margin {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.center {
+    text-align: center;
+}
+
+#red-button {
+    background-color: #d44b4b;
+}
+
+#blue-button {
+    background-color: #4fadd8;
+}
+
+#yellow-button {
+    background-color: #d8a414;
+}
+
+#green-button {
+    background-color: #499749;
+}
+
+#random-num {
+      line-height: 75px;
+      font-size: 60px;
+}
+
+.win-loss > p {
+    padding-top: 14px;
+    font-weight: 700;
+}
+
+.score-class {
+    
+}
