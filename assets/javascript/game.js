@@ -9,12 +9,15 @@ var blue = 0;
 var yell = 0;
 var gree = 0;
 
+function restartGame() {
+   wins = 0;
+   losses = 0;
+   totalScore = 0;
+}
+
 initializeGame()
 
 function initializeGame() {
-    wins = 0;
-    losses = 0;
-    totalScore = 0;
     red = randNum();
     blue = randNum();
     yell = randNum();
@@ -43,50 +46,42 @@ function randNum() {
 $(".btn").on("click", function() {
 
     if (losses === 5){
+        $("#game-over").text("YOU LOST!!!!");
         endGame()
         return
        
     } else if (wins === 3) {
-        endGame()
+        $("#game-over").text("YOU WON!!!!");
         return
     }
+    
       totalScore = Number(totalScore) + Number($(this).attr("value"));
       $("#total").text(totalScore)
       console.log(totalScore)
    
       if (totalScore === initalRandNum) {
-        randNum();
-        wins++;
-        $("#win").text(wins); 
-        totalScore = 0; 
-        $("#total").text(totalScore); 
-        RandNumTarget();
+          initializeGame() 
+          wins++;
+          $("#win").text(wins); 
+          totalScore = 0; 
+          $("#total").text(totalScore); 
         
-      
-    
-    } else if (totalScore > initalRandNum) {
-        randNum();
-        losses++;
-        $("#loss").text(losses);
-        totalScore = 0;
-        $("#total").text(totalScore);
-        RandNumTarget();
         
     
+      } else if (totalScore > initalRandNum) {
+          initializeGame() 
+          losses++;
+          $("#loss").text(losses);
+          totalScore = 0;
+          $("#total").text(totalScore);
     } 
       
 });
-        
+      
      function endGame() {
-         if (losses === 5) {
-         $("#game-over").text("YOU LOST!!!!");
-         var button = $("#button").html("<button>");
-         $("#button").append(button);
-         } else if (wins === 3) {
-         $("#game-over").text("YOU WON!!!!");
-       }
-    }
+    
 
+     }
 });
 
 
