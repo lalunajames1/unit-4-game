@@ -39,6 +39,7 @@ $(document).ready(function() {
         $("#blue-button").attr("value", crystals[1]);
         $("#yellow-button").attr("value", crystals[2]); 
         $("#green-button").attr("value", crystals[3]);    
+        
     }
     
     function RandNumTarget() {
@@ -58,21 +59,22 @@ $(document).ready(function() {
         }
     }
     
-    $(".btn").on("click", function() {
+    $(".btn").on("click", function() {  
+        
+        totalScore = Number(totalScore) + Number($(this).attr("value"));
+        $("#total").text(totalScore);
+        console.log(totalScore);
+
         if (losses === 5) {
             $("#game-over").text("YOU LOST!!!!");
             endGame();
-
+    
             } else if (wins === 3) {
             $("#game-over").text("YOU WON!!!!");
             endGame();
         
-        } else {
-            totalScore = Number(totalScore) + Number($(this).attr("value"));
-          $("#total").text(totalScore);
-          console.log(totalScore);
-        }
-       
+        }     
+        
           if (totalScore === initalRandNum) {
               initializeGame() 
               wins++;
@@ -87,7 +89,8 @@ $(document).ready(function() {
               $("#loss").text(losses);
               totalScore = 0;
               $("#total").text(totalScore);
-        }        
+        }      
+
     });
           
          function endGame() {
@@ -101,4 +104,9 @@ $(document).ready(function() {
               }
     
          }
+
+
+
     });
+
+ 
